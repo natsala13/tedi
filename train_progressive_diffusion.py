@@ -27,9 +27,7 @@ from util import (
 log = logging.getLogger(__name__)
 
 
-def initialize_trainer(
-    configs: dict[str, argparse.Namespace], device: torch.device
-) -> Trainer:
+def initialize_trainer(configs: dict[str, argparse.Namespace], device: torch.device) -> Trainer:
     log.info("Initializing unet...")
     unet = Unet(configs["unet_config"])
     log.info("Initializing diffusion...")

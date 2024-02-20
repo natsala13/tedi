@@ -349,7 +349,7 @@ def test_to_bvh(motion: Tensor, path: Path, name: str, dataset: int = 500) -> No
     save_path = path / name
     assert not save_path.exists(), f"{save_path} already exists."
     # Parse a stereotype bvh file
-    data_dir = Path(__file__).parent.parent.parent / "data" / "processed" / "high"
+    data_dir = Path(__file__).parent.parent / "data" / "processed"
     joints, *_ = parse_bvh_file(
         data_dir / "01_01.bvh"
     )
